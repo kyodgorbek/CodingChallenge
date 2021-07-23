@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private var endZonedDateTime: ZonedDateTime =
-        ZonedDateTime.parse("2021-07-28T00:00+01:00[Asia/Andijan]")
+        ZonedDateTime.parse("2021-07-28T00:00+01:00[Asia/Tashkent]")
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
                 1,
                 "Yodgorbek",
                 1,
-                "2020-01-01T00:00+01:00[Asia/Andijan]",
-                "2020-01-11T00:00+01:00[Asia/Andijan]",
-                "2020-01-01T00:00+01:00[Asia/Andijan]"
+                "2020-01-01T00:00+01:00[Asia/Tashkent]",
+                "2020-01-11T00:00+01:00[Asia/Tashkent]",
+                "2020-01-01T00:00+01:00[Asia/Tashkent]"
             ), Alarm(
                 1,
                 "TEST",
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             .collect(Collectors.toList())
         println("Convert list of person objects to Json:")
 
-        var zone: ZonedDateTime = ZonedDateTime.parse("2020-01-01T00:00+01:00[Asian/Tashkent]")
+        var zone: ZonedDateTime = ZonedDateTime.parse("2020-01-01T00:00+01:00[Asia/Tashkent]")
         val jsonData = gson.toJson(list) // converts to json
         Log.e("jsonInput", jsonData.toString())
 
